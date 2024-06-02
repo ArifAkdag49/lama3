@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+</head>
+<body>
+    <h1>Add Employee</h1>
+    <form id="employeeForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="department">Department:</label><br>
+        <input type="text" id="department" name="department" required><br>
+        <label for="role">Role:</label><br>
+        <input type="text" id="role" name="role" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="response"></p>
+    <script>
+        document.getElementById('employeeForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch('/add_employee', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            if (response.ok) {
+                document.getElementById('response').textContent = 'Employee added successfully: ' + JSON.stringify(result.employee);
+            } else {
+                document.getElementById('response').textContent = 'Error: ' + result.error;
+            }
+        });
+    </script>
+</body>
+</html>
