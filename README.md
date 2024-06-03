@@ -1,4 +1,6 @@
 # lama3
+
+yeni hugging face TOKEN  3-haziran :  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
 lama_ai_model_training
 
 Projedeki Ana Hedefler:
