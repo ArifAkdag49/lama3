@@ -1,3 +1,6 @@
+# pip install pandas transformers torch flask
+
+
 from data_loader import get_employee_data
 from llama_model import generate_response
 

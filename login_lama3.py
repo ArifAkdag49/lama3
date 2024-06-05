@@ -1,3 +1,5 @@
+# pip install huggingface_hub
+
 from huggingface_hub import login
 import os
 

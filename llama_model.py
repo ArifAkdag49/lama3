@@ -1,3 +1,6 @@
+# pip install requests
+
+
 import requests
 
 # Hugging Face API URL ve token

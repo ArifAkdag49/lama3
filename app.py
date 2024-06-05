@@ -1,3 +1,6 @@
+
+# pip install Flask pandas   Calistirilmali ki ktutuphanlere local e insin
+
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import os
