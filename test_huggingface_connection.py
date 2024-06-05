@@ -10,3 +10,6 @@ def query(payload):
 
 data = query({"inputs": "Hello, how are you?"})
 print(data)
+
+
+# test edeceg'z bakalim
