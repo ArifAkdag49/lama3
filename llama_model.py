@@ -2,7 +2,7 @@ import requests
 
 # Hugging Face API URL ve token
 API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct"
-headers = {"Authorization": f"Bearer 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"}
+headers = {"Authorization": f"Bearer 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"}
 
 def generate_response(prompt):
     response = requests.post(API_URL, headers=headers, json={"inputs": prompt})
