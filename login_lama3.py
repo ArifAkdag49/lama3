@@ -1,8 +1,25 @@
+# from huggingface_hub import login
+# import os
+
+# # Hugging Face API tokenini çevresel değişkenden alın
+# token = os.getenv("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")
+
+# # Tokeni kullanarak giriş yapın
+# login(token)
+
+
+
 from huggingface_hub import login
-import os
 
-# Hugging Face API tokenini çevresel değişkenden alın
-token = os.getenv("HUGGINGFACE_TOKEN")
+# Yeni oluşturduğunuz token'ı buraya ekleyin
+token = "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"
 
-# Tokeni kullanarak giriş yapın
-login(token)
+try:
+    login(token)
+    print("Successfully logged in!")
+except ValueError as e:
+    print(f"Failed to log in: {e}")
+
+
+
+
